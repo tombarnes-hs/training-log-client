@@ -4,6 +4,7 @@ const store = require('../store.js')
 
 // elements to hide on initial load
 $('#change-password-form').hide()
+$('#sign-out-button').hide()
 
 // Messages for user indicating success of failure during auth processes
 const signUpSuccess = function () {
@@ -26,22 +27,22 @@ const signInSuccess = function (response) {
   $('#change-password-form').show()
   $('#sign-up-form').hide()
   // $('#newGame-button').show()
-  // $('#sign-out-button').show()
+  $('#sign-out-button').show()
 }
 //
-// const signOutSuccess = function () {
-//   // fill empty html with text and style
-//   $('#display-message').html('Sign out successful. Sign in to play again.')
-//   $('#display-message').css('color', 'green')
-//   $('#sign-out-button').trigger('reset')
-//   $('#sign-in-form').show()
-//   $('#sign-out-button').hide()
-//   $('#change-password-form').hide()
-//   $('#newGame-button').hide()
-//   $('.container').hide()
-//   $('#stat-button').hide()
-// }
-//
+const signOutSuccess = function () {
+  // fill empty html with text and style
+  $('#display-message').html('Sign out successful. Sign in to view your data.')
+  $('#display-message').css('color', 'green')
+  $('#sign-out-button').trigger('reset')
+  $('#sign-in-form').show()
+  $('#sign-out-button').hide()
+  $('#change-password-form').hide()
+  // $('#newGame-button').hide()
+  // $('.container').hide()
+  // $('#stat-button').hide()
+}
+
 const changePasswordSuccess = function () {
   // fill empty html with text and style
   $('#display-message').html('Password change successful. Sign in with new password please')
@@ -50,7 +51,7 @@ const changePasswordSuccess = function () {
   // hide and/or show html elements according to visual flow
   $('#change-password-form').hide()
   // $('#newGame-button').hide()
-  // $('#sign-out-button').hide()
+  $('#sign-out-button').hide()
   // $('.container').hide()
   $('#sign-in-form').show()
 }
@@ -68,7 +69,7 @@ const failure = function () {
 module.exports = {
   signUpSuccess,
   signInSuccess,
-  // signOutSuccess,
+  signOutSuccess,
   changePasswordSuccess,
   failure
 }
