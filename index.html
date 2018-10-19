@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>PR Bot</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,30 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+      <h1> PR Bot </h1>
+      <p> training log for high performance rowers </p>
+
+      </header>
+      <hr>
+      <br>
+
+      <section class="auth">
+        <form id="sign-up-form">
+          <legend> Enter credentials to create an account </legend>
+          <p> Username </p>
+          <input required type="text" name="credentials[email]" placeholder="Enter Email">
+          <p> Password </p>
+          <input required type="password" name="credentials[password]" placeholder="Enter Password">
+          <p> Confirm Password </p>
+          <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit">
+        </form>
+
+
+      </section>
+
+      <p id="display-message"></p>
+
     </body>
 </html>
