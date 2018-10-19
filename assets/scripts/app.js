@@ -10,4 +10,5 @@ const authEvents = require('./auth/events.js')
 $(() => {
   // Event Listeners for Auth
   $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
 })

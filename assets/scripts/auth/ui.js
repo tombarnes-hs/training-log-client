@@ -8,20 +8,20 @@ const signUpSuccess = function () {
   $('#display-message').html('Sign up successful')
   $('#display-message').css('color', 'green')
   $('#sign-up-form').trigger('reset')
-  // $('#sign-up-form').hide()
+  $('#sign-up-form').hide()
 }
 
-// const signInSuccess = function (response) {
-//   // fill empty html with text and style
-//   $('#display-message').html('Sign in successful! Click New Game to Begin')
-//   $('#display-message').css('color', 'green')
-//   $('#sign-in-form').trigger('reset')
-//   store.user = response.user
-//   $('#sign-in-form').hide()
-//   $('#change-password-form').show()
-//   $('#newGame-button').show()
-//   $('#sign-out-button').show()
-// }
+const signInSuccess = function (response) {
+  // fill empty display-message elements with with text and style
+  $('#display-message').html('Sign in successful')
+  $('#display-message').css('color', 'green')
+  $('#sign-in-form').trigger('reset')
+  store.user = response.user
+  $('#sign-in-form').hide()
+  // $('#change-password-form').show()
+  // $('#newGame-button').show()
+  // $('#sign-out-button').show()
+}
 //
 // const signOutSuccess = function () {
 //   // fill empty html with text and style
@@ -60,7 +60,7 @@ const failure = function () {
 
 module.exports = {
   signUpSuccess,
-  // signInSuccess,
+  signInSuccess,
   // signOutSuccess,
   // changePasswordSuccess,
   failure
