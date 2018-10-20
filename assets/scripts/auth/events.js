@@ -4,6 +4,11 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
+// register new user event handler
+const onRegisterNewUser = function (event) {
+  event.preventDefault()
+  ui.registerNewuser()
+}
 // sign up event handler
 const onSignUp = function (event) {
   event.preventDefault()
@@ -39,6 +44,7 @@ const onSignOut = function (event) {
 }
 
 module.exports = {
+  onRegisterNewUser,
   onSignUp,
   onSignIn,
   onChangePassword,

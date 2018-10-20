@@ -5,6 +5,15 @@ const store = require('../store.js')
 // elements to hide on initial load
 $('#change-password-form').hide()
 $('#sign-out-button').hide()
+$('#sign-up-form').hide()
+
+// Show register new user form when button is clicked
+const registerNewuser = function () {
+  $('#sign-up-form').show()
+  $('#sign-in-form').hide()
+  $('#sign-in-form').trigger('reset')
+  $('#sign-up-button').hide()
+}
 
 // Messages for user indicating success of failure during auth processes
 const signUpSuccess = function () {
@@ -12,6 +21,7 @@ const signUpSuccess = function () {
   $('#display-message').html('Sign up successful')
   $('#display-message').css('color', 'green')
   $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').show()
   $('#sign-up-form').hide()
 }
 
@@ -26,8 +36,8 @@ const signInSuccess = function (response) {
   $('#sign-in-form').hide()
   $('#change-password-form').show()
   $('#sign-up-form').hide()
-  // $('#newGame-button').show()
   $('#sign-out-button').show()
+  $('#sign-up-button').hide()
 }
 //
 const signOutSuccess = function () {
@@ -38,9 +48,6 @@ const signOutSuccess = function () {
   $('#sign-in-form').show()
   $('#sign-out-button').hide()
   $('#change-password-form').hide()
-  // $('#newGame-button').hide()
-  // $('.container').hide()
-  // $('#stat-button').hide()
 }
 
 const changePasswordSuccess = function () {
@@ -50,9 +57,7 @@ const changePasswordSuccess = function () {
   $('#change-password-form').trigger('reset')
   // hide and/or show html elements according to visual flow
   $('#change-password-form').hide()
-  // $('#newGame-button').hide()
   $('#sign-out-button').hide()
-  // $('.container').hide()
   $('#sign-in-form').show()
 }
 
@@ -64,9 +69,8 @@ const failure = function () {
   $('#change-password-form').trigger('reset')
 }
 
-// Messages for user during game play
-
 module.exports = {
+  registerNewuser,
   signUpSuccess,
   signInSuccess,
   signOutSuccess,
