@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>PR Bot</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>PR Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <header>
-      <h1> PR Bot </h1>
-      <p> training log for high performance rowers </p>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      </header>
-      <hr>
-      <br>
-      <div class="container">
-        <div class="jumbotron">
-          <h1 class="display-4"> Welcome! </h1>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1> PR Bot </h1>
+    <p> training log for high performance rowers </p>
+
+  </header>
+  <hr>
+  <br>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"> Welcome! </h1>
       <section class="auth col-sm">
         <form id="sign-up-form">
           <legend> Enter credentials to create an account </legend>
@@ -31,84 +33,125 @@
               <input required type="email" class="form-control form-control-sm" name="credentials[email]" placeholder="Enter Email">
             </div>
           </div>
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label"> Password </label>
-          <div class="col-sm-10">
-            <input required type="password" class="form-control form-control-sm" name="credentials[password]" placeholder="Enter Password">
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"> Password </label>
+            <div class="col-sm-10">
+              <input required type="password" class="form-control form-control-sm" name="credentials[password]" placeholder="Enter Password">
+            </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label"> Confirm Password </label>
-          <div class="col-sm-10">
-            <input required type="password" class="form-control form-control-sm" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"> Confirm Password </label>
+            <div class="col-sm-10">
+              <input required type="password" class="form-control form-control-sm" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+              </div>
+            </div>
+        </form>
+
+
+        <form id="sign-in-form">
+          <legend> Enter email and password to sign in </legend>
+          <hr class="my-4">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"> Email </label>
+            <div class="col-sm-10">
+              <input required type="email" class="form-control form-control-sm" name="credentials[email]" placeholder="Enter Email">
+            </div>
           </div>
-        </div>
-      </form>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-2 col-form-label"> Password </label>
+              <div class="col-sm-10">
+                <input required type="password" class="form-control form-control-sm" name="credentials[password]" placeholder="Enter Password">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+              </div>
+            </div>
+        </form>
 
-
-      <form id="sign-in-form">
-        <legend> Enter email and password to sign in </legend>
-        <hr class="my-4">
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label"> Email </label>
-          <div class="col-sm-10">
-            <input required type="email" class="form-control form-control-sm" name="credentials[email]" placeholder="Enter Email">
+        <form id="change-password-form">
+          <legend> Enter password below to update </legend>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"> Old password </label>
+            <div class="col-sm-10">
+              <input required type="password" class="form-control form-control-sm" name="passwords[old]" placeholder="Old Password">
+            </div>
           </div>
-        </div>
-      <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label"> Password </label>
-        <div class="col-sm-10">
-          <input required type="password" class="form-control form-control-sm" name="credentials[password]" placeholder="Enter Password">
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-        </div>
-      </div>
-    </form>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"> New Password </label>
+            <div class="col-sm-10">
+              <input required type="password" class="form-control form-control-sm" name="passwords[new]" placeholder="New Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+            </div>
+          </div>
+        </form>
 
-    <form id="change-password-form">
-      <legend> Enter password below to update </legend>
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"> Old password </label>
-        <div class="col-sm-10">
-          <input required type="password" class="form-control form-control-sm" name="passwords[old]" placeholder="Old Password">
+        <div id="sign-out-button">
+          <button type="button" class="btn btn-secondary btn-sm">Logout</button>
         </div>
-      </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label"> New Password </label>
-      <div class="col-sm-10">
-        <input required type="password" class="form-control form-control-sm" name="passwords[new]" placeholder="New Password">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
-      </div>
-    </div>
-  </form>
 
-  <div id="sign-out-button">
-      <button type="button" class="btn btn-secondary btn-sm">Logout</button>
-  </div>
-
-    <div id="sign-up-button">
-      <button type="button" class="btn btn-secondary btn-sm">Click here to register</button>
-    </div>
-      <br>
-      <p id="display-message"></p>
+        <div id="sign-up-button">
+          <button type="button" class="btn btn-secondary btn-sm">Click here to register</button>
+        </div>
+        <br>
+        <p id="display-message"></p>
 
       </section>
+    </div>
+  </div>
+
+  <h2> Enter Workout Info to Begin </h2>
+  <form id="create-workout-form">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputDate3"> Date </label>
+        <input type="date" class="form-control form-control-sm" name="workout[date]">
       </div>
-
-
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="inputNum3"> Time (in minutes) </label>
+        <input type="number" class="form-control form-control-sm" name="workout[elapsed_time]">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputNum3"> Avg Watts </label>
+        <input type="number" class="form-control form-control-sm" name="workout[average_watts]">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputNum3"> Avg Heart Rate </label>
+        <input type="number" class="form-control form-control-sm" name="workout[average_hr]">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputNum3"> Pre-Workout Fatigue (1-10) </label>
+        <input type="number" class="form-control form-control-sm" name="workout[pre_fatigue]">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputNum3"> Post-Workout Fatigue (1-10) </label>
+        <input type="number" class="form-control form-control-sm" name="workout[post_fatigue]">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-10">
+        <label for="inputNum3"> Notes </label>
+        <input type="text" class="form-control form-control-sm" name="workout[notes]">
+      </div>
     </div>
 
-    </body>
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+  </form>
+
+</body>
+
 </html>
