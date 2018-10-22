@@ -18,4 +18,5 @@ $(() => {
 
   // Event Listeners for Workout Log
   $('#create-workout-form').on('submit', logEvents.onCreateWorkout)
+  $('#view-all-workouts').on('click', logEvents.onViewWorkouts)
 })

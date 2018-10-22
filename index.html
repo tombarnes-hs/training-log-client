@@ -110,12 +110,19 @@
     </div>
   </div>
 
-  <h2> Enter Workout Info to Begin </h2>
+  <div id="create-success-message" class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Your workout has been logged!.</p>
+  <hr>
+  <p class="mb-0">You can view your workout log, edit, and delete workouts in the navbar at the top of the page.</p>
+</div>
+
   <form id="create-workout-form">
+    <h2> Enter Workout Info to Begin </h2>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputDate3"> Date </label>
-        <input type="date" class="form-control form-control-sm" name="workout[date]">
+        <input required type="date" class="form-control form-control-sm" name="workout[date]">
       </div>
     </div>
     <div class="form-row">
@@ -151,6 +158,11 @@
 
     <button type="submit" class="btn btn-primary btn-sm">Submit</button>
   </form>
+
+  <div id="view-all-workouts">
+    <button type="button" class="btn btn-secondary btn-sm"> Click here to view all workouts </button>
+  </div>
+  <div id="workout-log"></div>
 
 </body>
 
