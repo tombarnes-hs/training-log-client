@@ -9,6 +9,8 @@ $('#sign-up-form').hide()
 $('#create-workout-form').hide()
 $('#view-all-workouts').hide()
 $('#create-workout-button').hide()
+$('#update-success-message').hide()
+$('#delete-success-message').hide()
 // Show register new user form when button is clicked
 const registerNewuser = function () {
   $('#sign-up-form').show()
@@ -25,6 +27,15 @@ const signUpSuccess = function () {
   $('#sign-up-form').trigger('reset')
   $('#sign-in-form').show()
   $('#sign-up-form').hide()
+}
+
+// Messages for user indicating success of failure during auth processes
+const signUpFailure = function () {
+  // fill empty html with text and style
+  $('#display-message').html('Sign up failed. Double check your passwords or try logging in.')
+  $('#display-message').css('color', 'red')
+  $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').show()
 }
 
 const signInSuccess = function (response) {
@@ -88,5 +99,6 @@ module.exports = {
   signInSuccess,
   signOutSuccess,
   changePasswordSuccess,
-  failure
+  failure,
+  signUpFailure
 }
