@@ -20,4 +20,5 @@ $(() => {
   $('#create-workout-form').on('submit', logEvents.onCreateWorkout)
   $('#view-all-workouts').on('click', logEvents.onViewWorkouts)
   $('#workout-log').on('submit', '.update-form', logEvents.onUpdateNotes)
+  $('#workout-log').on('click', '.delete-workout-button', logEvents.onDeleteWorkout)
 })

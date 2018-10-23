@@ -28,7 +28,7 @@ const viewWorkouts = function () {
   })
 }
 
-// index AJAX call
+// patch AJAX call
 const updateWorkout = function (notesData) {
   return $.ajax({
     // http://localhost:4741 or // https://frozen-sierra-35636.herokuapp.com
@@ -41,8 +41,20 @@ const updateWorkout = function (notesData) {
   })
 }
 
+// delete AJAX call
+const deleteWorkout = function () {
+  return $.ajax({
+    url: config.apiUrl + `/workouts/${store.deleteId}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   createWorkout,
   viewWorkouts,
-  updateWorkout
+  updateWorkout,
+  deleteWorkout
 }
