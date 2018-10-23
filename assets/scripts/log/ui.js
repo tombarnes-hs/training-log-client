@@ -5,6 +5,7 @@ const showWorkoutsTemplate = require('../templates/workout-log.handlebars')
 // initial load state
 $('#create-success-message').hide()
 $('#update-success-message').hide()
+$('#delete-success-message').hide()
 $('#create-workout-form').hide()
 
 // show create form
@@ -37,9 +38,20 @@ const updateSuccess = function () {
   $('.update-form').trigger('reset')
 }
 
+const deleteSuccess = function () {
+  $('#create-workout-form').trigger('reset')
+  $('.update-form').trigger('reset')
+  $('#create-workout-form').hide()
+  $('#workout-log').hide()
+  $('#delete-success-message').fadeTo(2000, 500).slideUp(500, function () {
+    $('#delete-success-message').slideUp(500)
+  })
+}
+
 module.exports = {
   createSuccess,
   viewWorkoutsSuccess,
   updateSuccess,
-  showCreateForm
+  showCreateForm,
+  deleteSuccess
 }
