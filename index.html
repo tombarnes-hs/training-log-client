@@ -155,25 +155,25 @@
     <div class="form-row">
       <div class="form-group col-md-2">
         <label for="inputNum3"> Time (in minutes) </label>
-        <input type="number" class="form-control form-control-sm" name="workout[elapsed_time]">
+        <input type="number" min="1" class="form-control form-control-sm" name="workout[elapsed_time]">
       </div>
       <div class="form-group col-md-2">
         <label for="inputNum3"> Avg Watts </label>
-        <input type="number" class="form-control form-control-sm" name="workout[average_watts]">
+        <input type="number" min="1" class="form-control form-control-sm" name="workout[average_watts]">
       </div>
       <div class="form-group col-md-2">
         <label for="inputNum3"> Avg Heart Rate </label>
-        <input type="number" class="form-control form-control-sm" name="workout[average_hr]">
+        <input type="number" min="1" class="form-control form-control-sm" name="workout[average_hr]">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputNum3"> Pre-Workout Fatigue (1-10) </label>
-        <input type="number" class="form-control form-control-sm" name="workout[pre_fatigue]">
+        <input type="number" min="1" max="10" class="form-control form-control-sm" name="workout[pre_fatigue]">
       </div>
       <div class="form-group col-md-4">
         <label for="inputNum3"> Post-Workout Fatigue (1-10) </label>
-        <input type="number" class="form-control form-control-sm" name="workout[post_fatigue]">
+        <input type="number" min="1" max="10" class="form-control form-control-sm" name="workout[post_fatigue]">
       </div>
     </div>
     <div class="form-row">
