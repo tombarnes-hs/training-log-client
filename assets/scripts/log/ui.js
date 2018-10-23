@@ -36,6 +36,7 @@ const updateSuccess = function () {
     $('#update-success-message').slideUp(500)
   })
   $('.update-form').trigger('reset')
+  $('#workout-log').hide()
 }
 
 const deleteSuccess = function () {
