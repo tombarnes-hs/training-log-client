@@ -11,6 +11,7 @@ $('#view-all-workouts').hide()
 $('#create-workout-button').hide()
 $('#update-success-message').hide()
 $('#delete-success-message').hide()
+$('#user-bar').hide()
 // Show register new user form when button is clicked
 const registerNewuser = function () {
   $('#sign-up-form').show()
@@ -53,6 +54,8 @@ const signInSuccess = function (response) {
   $('#sign-up-button').hide()
   $('#view-all-workouts').show()
   $('#create-workout-button').show()
+  $('.container').hide()
+  $('#user-bar').show()
 }
 //
 const signOutSuccess = function () {
@@ -68,6 +71,8 @@ const signOutSuccess = function () {
   $('#sign-up-button').show()
   $('.workout').hide()
   $('#create-workout-button').hide()
+  $('.container').show()
+  $('#user-bar').hide()
 }
 
 const changePasswordSuccess = function () {
@@ -83,6 +88,8 @@ const changePasswordSuccess = function () {
   $('#view-all-workouts').hide()
   $('.workout').hide()
   $('#create-workout-button').hide()
+  $('.container').show()
+  $('#user-bar').hide()
 }
 
 const failure = function () {
