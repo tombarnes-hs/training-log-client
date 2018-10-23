@@ -24,7 +24,6 @@ const onUpdateNotes = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   store.id = $(event.target).data('id')
-  console.log(store.id)
   api.updateWorkout(data)
     .then(ui.updateSuccess)
     .catch(ui.logFailure)
@@ -32,9 +31,7 @@ const onUpdateNotes = function (event) {
 
 const onDeleteWorkout = function (event) {
   event.preventDefault()
-  console.log(event.target)
   store.deleteId = $(event.target).data('id')
-  console.log(store.deleteId)
   api.deleteWorkout()
     .then(ui.deleteSuccess)
     .catch(ui.logFailure)

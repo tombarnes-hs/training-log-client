@@ -19,7 +19,7 @@ const registerNewuser = function () {
 // Messages for user indicating success of failure during auth processes
 const signUpSuccess = function () {
   // fill empty html with text and style
-  $('#display-message').html('Sign up successful')
+  $('#display-message').html('Sign up successful! Please login with your new credentials.')
   $('#display-message').css('color', 'green')
   $('#sign-up-form').trigger('reset')
   $('#sign-in-form').show()
@@ -51,6 +51,10 @@ const signOutSuccess = function () {
   $('#sign-in-form').show()
   $('#sign-out-button').hide()
   $('#change-password-form').hide()
+  $('#create-workout-form').hide()
+  $('#view-all-workouts').hide()
+  $('#sign-up-button').show()
+  $('.workout').hide()
 }
 
 const changePasswordSuccess = function () {
@@ -62,10 +66,13 @@ const changePasswordSuccess = function () {
   $('#change-password-form').hide()
   $('#sign-out-button').hide()
   $('#sign-in-form').show()
+  $('#create-workout-form').hide()
+  $('#view-all-workouts').hide()
+  $('.workout').hide()
 }
 
 const failure = function () {
-  $('#display-message').html('Something went wrong')
+  $('#display-message').html('Something went wrong. Make sure you are using the correct password and username.')
   $('#display-message').css('color', 'red')
   $('#sign-up-form').trigger('reset')
   $('#sign-in-form').trigger('reset')
