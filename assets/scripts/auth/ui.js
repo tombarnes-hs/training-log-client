@@ -7,7 +7,7 @@ $('#change-password-form').hide()
 $('#sign-out-button').hide()
 $('#sign-up-form').hide()
 $('#create-workout-form').hide()
-
+$('#view-all-workouts').hide()
 // Show register new user form when button is clicked
 const registerNewuser = function () {
   $('#sign-up-form').show()
@@ -40,6 +40,7 @@ const signInSuccess = function (response) {
   $('#sign-out-button').show()
   $('#sign-up-button').hide()
   $('#create-workout-form').show()
+  $('#view-all-workouts').show()
 }
 //
 const signOutSuccess = function () {

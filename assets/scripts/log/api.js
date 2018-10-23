@@ -20,7 +20,7 @@ const createWorkout = function (workoutData) {
 const viewWorkouts = function () {
   return $.ajax({
     // http://localhost:4741 or // https://frozen-sierra-35636.herokuapp.com
-    url: config.apiUrl + '/workouts',
+    url: config.apiUrl + `/workouts`,
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -28,7 +28,21 @@ const viewWorkouts = function () {
   })
 }
 
+// index AJAX call
+const updateWorkout = function (notesData) {
+  return $.ajax({
+    // http://localhost:4741 or // https://frozen-sierra-35636.herokuapp.com
+    url: config.apiUrl + `/workouts/${store.id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: notesData
+  })
+}
+
 module.exports = {
   createWorkout,
-  viewWorkouts
+  viewWorkouts,
+  updateWorkout
 }
