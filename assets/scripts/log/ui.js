@@ -27,6 +27,11 @@ const viewWorkoutsSuccess = function (response) {
   const showWorkoutsHtml = showWorkoutsTemplate({ workouts: response.workouts })
   $('.workout-log').html(showWorkoutsHtml)
   $('#workout-log').show()
+  if (response.workouts.length === 0) {
+    $('#view-empty-message').fadeTo(2000, 500).slideUp(500, function () {
+      $('#view-empty-message').slideUp(500)
+    })
+  }
   $('#create-workout-form').hide()
 }
 

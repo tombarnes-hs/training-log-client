@@ -12,6 +12,7 @@ $('#create-workout-button').hide()
 $('#update-success-message').hide()
 $('#delete-success-message').hide()
 $('#user-bar').hide()
+$('#view-empty-message').hide()
 // Show register new user form when button is clicked
 const registerNewuser = function () {
   $('#sign-up-form').show()
