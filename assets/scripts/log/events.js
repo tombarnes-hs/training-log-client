@@ -5,6 +5,11 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
 
+const onShowCreateForm = function (event) {
+  event.preventDefault()
+  ui.showCreateForm()
+}
+
 const onCreateWorkout = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -16,7 +21,7 @@ const onCreateWorkout = function (event) {
 const onViewWorkouts = function (event) {
   event.preventDefault()
   api.viewWorkouts()
-    .then(ui.viewWorkouts)
+    .then(ui.viewWorkoutsSuccess)
     .catch(ui.logFailure)
 }
 
@@ -41,5 +46,6 @@ module.exports = {
   onCreateWorkout,
   onViewWorkouts,
   onUpdateNotes,
-  onDeleteWorkout
+  onDeleteWorkout,
+  onShowCreateForm
 }

@@ -8,6 +8,7 @@ $('#sign-out-button').hide()
 $('#sign-up-form').hide()
 $('#create-workout-form').hide()
 $('#view-all-workouts').hide()
+$('#create-workout-button').hide()
 // Show register new user form when button is clicked
 const registerNewuser = function () {
   $('#sign-up-form').show()
@@ -39,8 +40,8 @@ const signInSuccess = function (response) {
   $('#sign-up-form').hide()
   $('#sign-out-button').show()
   $('#sign-up-button').hide()
-  $('#create-workout-form').show()
   $('#view-all-workouts').show()
+  $('#create-workout-button').show()
 }
 //
 const signOutSuccess = function () {
@@ -55,6 +56,7 @@ const signOutSuccess = function () {
   $('#view-all-workouts').hide()
   $('#sign-up-button').show()
   $('.workout').hide()
+  $('#create-workout-button').hide()
 }
 
 const changePasswordSuccess = function () {
@@ -69,6 +71,7 @@ const changePasswordSuccess = function () {
   $('#create-workout-form').hide()
   $('#view-all-workouts').hide()
   $('.workout').hide()
+  $('#create-workout-button').hide()
 }
 
 const failure = function () {

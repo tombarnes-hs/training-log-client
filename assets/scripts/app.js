@@ -17,6 +17,7 @@ $(() => {
   $('#sign-up-button').on('click', authEvents.onRegisterNewUser)
 
   // Event Listeners for Workout Log
+  $('#create-workout-button').on('click', logEvents.onShowCreateForm)
   $('#create-workout-form').on('submit', logEvents.onCreateWorkout)
   $('#view-all-workouts').on('click', logEvents.onViewWorkouts)
   $('#workout-log').on('submit', '.update-form', logEvents.onUpdateNotes)
