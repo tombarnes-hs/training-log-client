@@ -1,10 +1,10 @@
 # Personal Record (PR) Bot
 This app is a tool for rowers to maintain a record of their workouts. Once signed in, users can view their workout log, which will show a record of every workout they've recorded, add new workouts to the log, edit notes about their workouts, and delete workouts.
 
-The client's workout log is stored on the [Training Log API] (https://github.com/TomG84/training-log-api).
+The client's workout log is stored on the [Training Log API](https://github.com/TomG84/training-log-api).
 
-* The deployed Training Log API can be found [here] (https://frozen-sierra-35636.herokuapp.com/).
-* The deployed Training Log App can be found [here] (https://tomg84.github.io/training-log-client/).
+* The deployed Training Log API can be found [here](https://frozen-sierra-35636.herokuapp.com/).
+* The deployed Training Log App can be found [here](https://tomg84.github.io/training-log-client/).
 
 ## Technologies Used
 * HTML5
@@ -29,7 +29,7 @@ On the back-end I'd like to build another resource that the user can CRUD to. Th
 
 I created a plan for this project based largely on my experience from the previous project. I wanted to maintain a methodical approach in my development, experiment with more styling options, and create v1 of a website I've been thinking about for a long time.
 
-I started the project by writing out the user stories that I would use to guide my development and drawing a [wireframe] (https://imgur.com/wPumnNa). I also maintained a development journal to chart my progress and cross off requirements as they were met.
+I started the project by writing out the user stories that I would use to guide my development and drawing a [wireframe](https://imgur.com/wPumnNa). I also maintained a development journal to chart my progress and cross off requirements as they were met.
 
 ### User Stories
 
