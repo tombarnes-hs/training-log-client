@@ -74,6 +74,8 @@ const signOutSuccess = function () {
   $('#create-workout-button').hide()
   $('.container').show()
   $('#user-bar').hide()
+  $('#create-workout-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
 }
 
 const changePasswordSuccess = function () {
@@ -101,6 +103,14 @@ const failure = function () {
   $('#change-password-form').trigger('reset')
 }
 
+const changeFailure = function () {
+  $('#change-fail-message').html('Invalid password.')
+  $('#display-message').css('color', 'red')
+  $('#sign-up-form').trigger('reset')
+  $('#sign-in-form').trigger('reset')
+  $('#change-password-form').trigger('reset')
+}
+
 module.exports = {
   registerNewuser,
   signUpSuccess,
@@ -108,5 +118,6 @@ module.exports = {
   signOutSuccess,
   changePasswordSuccess,
   failure,
-  signUpFailure
+  signUpFailure,
+  changeFailure
 }
